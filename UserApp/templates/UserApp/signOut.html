@@ -1,0 +1,16 @@
+{%extends 'PostApp/template.html'%}
+{%block title%} PostBook - Sign Out {%endblock%}
+
+{%block HTML%}
+<h2>Your Account Has Been Logged Out!</h2>
+<div class="content-section">
+    <div class="border-top pt-3">
+        <small class='text-muted'>Don't Have an Account?
+            <a href="{%url 'signup'%}">Sign Up</a><br>
+        </small>
+        <small class='text-muted'>Already Have an Account?
+            <a href="{%url 'signin'%}">Sign In</a>
+        </small>
+    </div>
+</div>
+{%endblock%}

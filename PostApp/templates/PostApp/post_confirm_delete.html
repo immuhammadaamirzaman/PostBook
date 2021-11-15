@@ -1,0 +1,17 @@
+{%extends 'PostApp/template.html'%}
+{%block title%} PostBook - Post {%endblock%}
+
+{%block HTML%}
+<div class="content-section">
+    <form method="post">
+        {%csrf_token%}
+        <fieldset class="form-group">
+            <h2>You are going to DELETE this Post! "{{object.title}}"</h2>
+            <p>This action can not be recovered</p>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-danger" type="submit">Delete</button>
+        </div>
+    </form>
+</div>
+{%endblock%}

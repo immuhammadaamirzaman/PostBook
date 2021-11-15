@@ -1,0 +1,21 @@
+{%extends 'PostApp/template.html'%}
+{%block title%} PostBook - Sign In {%endblock%}
+
+{%block HTML%}
+<div class="content-section">
+    <form method="post">
+        {%csrf_token%}
+        <fieldset class="form-group">
+            {{form.as_p}}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Sign In</button>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <small class='text-muted'>Don't Have an Account?
+            <a class='ml-2' href="{%url 'signup'%}">Sign Up</a>
+        </small>
+    </div>
+</div>
+{%endblock%}
